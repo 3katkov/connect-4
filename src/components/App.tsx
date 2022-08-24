@@ -4,15 +4,18 @@ import GameControls from "components/GameControls";
 import GameProgress from "components/GameProgress";
 import { FC } from "react";
 import { RecoilRoot } from "recoil";
-import GameStats from "./GameStats";
+import ScoreBoard from "./ScoreBoard"
+import PlayerSettings from "./PlayerSettings"
 
 const App: FC = () => (
   
   <ChakraProvider>
-    
     <RecoilRoot>
+      <div className="rowC">
+        <ScoreBoard/>
+        <PlayerSettings/>
+      </div>
       <Container py={4} as={VStack}>
-        <GameStats /> 
         <Board /> 
         <GameProgress />
         <GameControls />
