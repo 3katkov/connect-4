@@ -11,6 +11,10 @@ const App: FC = () => (
   
   <ChakraProvider>
     <RecoilRoot>
+    <div className="rowC">
+      <div style={{float: 'left'}}><ScoreBoard/></div>
+      <div style={{float: 'right'}}><PlayerSettings/></div>
+      </div>
       <Container py={4} as={VStack}>
         <Board /> 
         <GameProgress />
